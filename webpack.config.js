@@ -2,12 +2,14 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     mode: 'none',
-    entry: './src/index.jsx', 
+    entry: './src/index.tsx',
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.ts', '.tsx', '.js'],
+        plugins: [new TsconfigPathsPlugin()]
     },
     output: {
         filename: 'main.js',
@@ -19,6 +21,11 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader',
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_module/,
+                use: 'ts-loader'
             },
             {
                 test: /\.css$/,
