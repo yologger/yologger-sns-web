@@ -51,6 +51,10 @@ module.exports = {
     ],
     devServer: {
         port: 8888,
-        historyApiFallback: true
+        historyApiFallback: true,
+        client: {
+            overlay: true,
+            webSocketURL: "ws://0.0.0.0:8888/ws",
+          },
     },
 };
