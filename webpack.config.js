@@ -38,6 +38,12 @@ module.exports = {
                     name: '[name].[ext]',
                 },
             },
+            {
+                test: /\.m?js/,
+                resolve: {
+                    fullySpecified: false
+                }
+            }
         ],
     },
     plugins: [
