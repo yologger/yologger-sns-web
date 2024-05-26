@@ -1,18 +1,18 @@
 import useHttpRequest from "~/hooks/useHttpRequest";
-import PostDetail from "./PostDetail"
 import { useParams } from 'react-router'
 import { ApiParameters } from "~/types/utils";
-import { getPost } from "~/api/pms";
+import { getBoard } from "~/api/bms";
+import BoardDetail from "./BoardDetail";
 
 interface PathParams {
-    pid: string;
+    bid: string;
 }
 
 const Container = () => {
 
-    const { pid } = useParams<PathParams>();
+    const { bid } = useParams<PathParams>();
     
-    const result = getPost({ pid: pid })
+    const result = getBoard({ bid: bid })
 
     result.then(data => 
         console.log(data)
@@ -33,7 +33,7 @@ const Container = () => {
     const body = "This is body"
 
     return <>
-        <PostDetail email={email} nickname={nickname} title={title} body={body} />
+        <BoardDetail email={email} nickname={nickname} title={title} body={body} />
     </>
 }
 

@@ -1,16 +1,14 @@
 import styled from "styled-components"
 import { theme } from '~/styledComponents';
-import { useParams } from 'react-router-dom'
 
-interface IPostDetailProps {
+interface IProps {
     email: string
     nickname: string
     title: string
     body: string
 }
 
-const PostDetail = ({ email, nickname, title, body }: IPostDetailProps) => {
-    
+const BoardDetail = ({ email, nickname, title, body }: IProps) => {
     return <Wrapper>
         <Page>
             <div>EMAIL: {email}</div>
@@ -30,4 +28,4 @@ export const Page = styled.div`
   width: ${({ theme }) => theme.bodyWidth};    
 `
 
-export default PostDetail
+export default BoardDetail

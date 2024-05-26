@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import { theme } from '~/styledComponents';
-import PostList from "./PostList";
+import BoardList from "../Board/BoardList";
 
 const Home = () => {
     return <Wrapper>
         <Page>
             <h1>ENV: {process.env.REACT_APP_ENV}</h1>
             <h1>API_URL: {process.env.REACT_APP_API}</h1>
-            <PostList />
+            <BoardList />
         </Page>
     </Wrapper>
 }

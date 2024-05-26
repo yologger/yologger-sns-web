@@ -6,9 +6,10 @@ import Home from '~/components/pages/Home';
 import Login from '~/components/pages/Login';
 import NotFound from '~/components/pages/NotFound';
 import Account from '~/components/pages/Account';
-import PostNew from '~/components/pages/Post/PostNew';
 import Signup from '~/components/pages/Signup';
-import PostDetail from '~/components/pages/Post/PostDetail';
+import BoardNew from '~/components/pages/Board/BoardNew';
+import BoardEdit from '~/components/pages/Board/BoardEdit';
+import BoardDetail from '~/components/pages/Board/BoardDetail';
 
 const App = () => {
   return <>
@@ -18,8 +19,9 @@ const App = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/account" component={Account} />
-        <Route exact path="/post/new" component={PostNew} />
-        <Route exact path="/post/:pid(\d+)" component={PostDetail} />
+        <Route exact path="/board/new" component={BoardNew} />
+        <Route exact path="/board/edit" component={BoardEdit} />
+        <Route exact path="/board/:bid(\d+)" component={BoardDetail} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

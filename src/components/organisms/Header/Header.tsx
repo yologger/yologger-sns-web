@@ -14,7 +14,7 @@ const Header = () => {
             <HeaderMainContent>
                 <HeaderMenuGroup>
                     <HeaderMenuLink to="/">Home</HeaderMenuLink>
-                    <HeaderMenuLink to="/post/new">Write</HeaderMenuLink>
+                    <HeaderMenuLink to="/board/new">Write</HeaderMenuLink>
                 </HeaderMenuGroup>
                 {isLoggedIn ? (
                     <HeaderMenuGroup>

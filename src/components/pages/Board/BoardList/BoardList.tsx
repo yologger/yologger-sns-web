@@ -1,17 +1,17 @@
-import Post from "./Post"
+import Board from "./Board"
 import styled from "styled-components"
 import { theme } from '~/styledComponents';
-import { IPost } from "~/types/post";
+import { IBoard } from "~/types/board";
 
-interface IPostListProps {
-  posts: IPost[]
+interface IBoardListProps {
+  boards: IBoard[]
 }
 
-const PostList = ({ posts }: IPostListProps) => {
+const BoardList = ({ boards }: IBoardListProps) => {
 
   return <>
-    {posts.map(post =>
-      <Post key={post.id} post={post} />
+    {boards.map(board =>
+      <Board key={board.id} board={board} />
     )}
   </>
 }
@@ -23,4 +23,4 @@ export const Wrapper = styled.div`
     flex-direction: column;
     `
 
-export default PostList
+export default BoardList
