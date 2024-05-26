@@ -1,0 +1,1 @@
+export type ApiParameters<Api extends (...args: any) => any> = Parameters<Api>[0];
