@@ -26,7 +26,7 @@ const Header = ({ isLoggedIn }: IHeaderProps) => {
                 ) : (
                     <HeaderMenuGroup>
                         <HeaderMenuLink to="/login">Login</HeaderMenuLink>
-                        <HeaderMenuLink to="/signup">Signup</HeaderMenuLink>
+                        <HeaderMenuLink to="/join">Join</HeaderMenuLink>
                     </HeaderMenuGroup>
                 )}
             </HeaderMainContent>

@@ -1,7 +1,7 @@
-import Signup from "./Signup"
+import Join from "./Join"
 
 const Container = () => {
-    return <Signup />
+    return <Join />
 }
 
 export default Container

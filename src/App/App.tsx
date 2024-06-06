@@ -6,7 +6,7 @@ import Home from '~/components/pages/Home';
 import Login from '~/components/pages/Login';
 import NotFound from '~/components/pages/NotFound';
 import Account from '~/components/pages/Account';
-import Signup from '~/components/pages/Signup';
+import Join from '~/components/pages/Join';
 import BoardNew from '~/components/pages/Board/BoardNew';
 import BoardEdit from '~/components/pages/Board/BoardEdit';
 import BoardDetail from '~/components/pages/Board/BoardDetail';
@@ -17,7 +17,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/join" component={Join} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/board/new" component={BoardNew} />
         <Route exact path="/board/edit" component={BoardEdit} />
