@@ -4,15 +4,19 @@ import App from './App/App';
 import GlobalStyles from './globalStyles';
 import { BrowserRouter } from 'react-router-dom';
 import { theme, ThemeProvider } from '~/styledComponents';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
-    <>  
+    <>
         <GlobalStyles />
-        <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </ThemeProvider>
-    </>, 
+        <Provider store={store}>
+            <ThemeProvider theme={theme}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </ThemeProvider>
+        </Provider>
+    </>,
     document.getElementById('root')
 );

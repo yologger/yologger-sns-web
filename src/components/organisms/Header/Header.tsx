@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom"
 import styled from '~/styledComponents';
 
-const Header = () => {
+interface IHeaderProps {
+    isLoggedIn: boolean
+}
 
-    const isLoggedIn: Boolean = false
+const Header = ({ isLoggedIn }: IHeaderProps) => {
 
     return <>
         <HeaderTop>
