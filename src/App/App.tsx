@@ -20,7 +20,7 @@ const App = () => {
         <Route exact path="/join" component={Join} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/board/new" component={BoardNew} />
-        <Route exact path="/board/edit" component={BoardEdit} />
+        <Route exact path="/board/edit/:bid(\d+)" component={BoardEdit} />
         <Route exact path="/board/:bid(\d+)" component={BoardDetail} />
         <Route component={NotFound} />
       </Switch>

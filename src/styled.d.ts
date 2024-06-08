@@ -7,5 +7,7 @@ declare module 'styled-components' {
     color: typeof theme['color'];
     font: typeof theme['font'];
     bodyWidth: typeof theme['bodyWidth']
+    margin: typeof theme['margin']
+    padding: typeof theme['padding']
   }
 }

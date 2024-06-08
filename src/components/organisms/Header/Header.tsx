@@ -9,11 +9,13 @@ const Header = ({ isLoggedIn }: IHeaderProps) => {
 
     return <>
         <HeaderTop>
+            <h1>ENV: {process.env.REACT_APP_ENV}</h1>
+            <h1>API_URL: {process.env.REACT_APP_API}</h1>
             <HeaderTopContent>
             </HeaderTopContent>
         </HeaderTop>
-        <HeaderMain>
-            <HeaderMainContent>
+        <HeaderBottom>
+            <HeaderBottomContent>
                 <HeaderMenuGroup>
                     <HeaderMenuLink to="/">Home</HeaderMenuLink>
                     <HeaderMenuLink to="/board/new">Write</HeaderMenuLink>
@@ -29,8 +31,8 @@ const Header = ({ isLoggedIn }: IHeaderProps) => {
                         <HeaderMenuLink to="/join">Join</HeaderMenuLink>
                     </HeaderMenuGroup>
                 )}
-            </HeaderMainContent>
-        </HeaderMain>
+            </HeaderBottomContent>
+        </HeaderBottom>
     </>
 }
 
@@ -48,18 +50,18 @@ const HeaderTopContent = styled.div`
     justify-content: space-between;
 `;
 
-const HeaderMain = styled.div`
+const HeaderBottom = styled.div`
     display: flex;
     justify-content: center;
     background: ${(p) => p.theme.color.white};
-    height: 40px;
+    height: 50px;
     width: 100%;
     border-bottom: 1px solid ${(props) => props.theme.color.shadow};
     position: sticky;
     top: 0;
 `
 
-const HeaderMainContent = styled.div`
+const HeaderBottomContent = styled.div`
     display: flex;
     height: 40px;
     width: ${(p) => p.theme.bodyWidth};
@@ -72,11 +74,13 @@ const HeaderMenuGroup = styled.div`
 `;
 
 const HeaderMenuLink = styled(Link)`
+    height: 50px;
+    font-size: 18px;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 15px;
     position: relative;
-    line-height: 1.4;
 `
 
 const HeaderMenuButton = styled.button`

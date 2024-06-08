@@ -9,32 +9,40 @@ const Board = ({ board }: IBoardProps) => {
 
     return <Wrapper>
         <BoardHeader nickname={board.nickname} email={board.email} />
-        <BoardTitle>TITLE: {board.title}</BoardTitle>
-        <BoardBody>BODY: {board.body}</BoardBody>
-        <BoardFooter>This is footer</BoardFooter>
+        <BoardTitle>{board.title}</BoardTitle>
+        <BoardBody>{board.body}</BoardBody>
+        {/* <BoardFooter>This is footer</BoardFooter> */}
     </Wrapper>
 }
 
 const BoardHeader = ({ nickname, email }) => {
     return <>
-        <div>NICKNAME: {nickname}</div>
-        <div>EMAIL: {email}</div>
+        <BoardNickname>{nickname}</BoardNickname>
+        <BoardEmail>{email}</BoardEmail>
     </>
 }
 
+const BoardNickname = styled.div`
+    font-size: ${(props) => props.theme.font.large};
+`
+
+const BoardEmail = styled.div`
+    
+`
+
 const Wrapper = styled.div`
   width: 100%;
-  background-color: cyan;
   display: flex;
-  /* background: ${({ theme }) => theme.color.white}; */
   justify-content: center;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px
+  margin: ${(props) => props.theme.margin.base};
+  padding: ${(props) => props.theme.padding.base};
+  border: 1px solid ${(props) => props.theme.color.shadow};
+  border-radius: 5px;
 `
 
 const BoardTitle = styled.div`
-    
+    font-size: ${(props) => props.theme.font.xlarge};
 `
 
 const BoardBody = styled.div`

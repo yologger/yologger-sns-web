@@ -79,25 +79,35 @@ const theme = {
       twitter: '#55ACEE',
   
       // New
-      bgztBlack: '#000000',
-  
-      bgztGrey0: '#ffffff',
-      bgztGrey10: '#fafafa',
-      bgztGrey50: '#f6f6f6',
-      bgztGrey100: '#e5e5e5',
-      bgztGrey150: '#CCCCCC',
-      bgztGrey200: '#B2B2B2',
-      bgztGrey300: '#999999',
-      bgztGrey400: '#8C8C8C',
-      bgztGrey500: '#7f7f7f',
-      bgztGrey600: '#666666',
-      bgztGrey700: '#4c4c4c',
-      bgztGrey800: '#333333',
-      bgztGrey900: '#191919',
-  
-      bgztRed50: '#fdf3f3',
-      bgztRed500: '#d80c18',
-      bgztBlue500: '#027AFF',
+      yologgerBlack: '#000000',
+
+      yologgerRed50: '#fdf3f3',
+      yologgerRed500: '#d80c18',
+
+      yologgerGrey0: '#ffffff',
+      yologgerGrey10: '#fafafa',
+      yologgerGrey50: '#f6f6f6',
+      yologgerGrey100: '#e5e5e5',
+      yologgerGrey150: '#CCCCCC',
+      yologgerGrey200: '#B2B2B2',
+      yologgerGrey300: '#999999',
+      yologgerGrey400: '#8C8C8C',
+      yologgerGrey500: '#7f7f7f',
+      yologgerGrey600: '#666666',
+      yologgerGrey700: '#4c4c4c',
+      yologgerGrey800: '#333333',
+      yologgerGrey900: '#191919',
+      
+      yologgerBlue100: '#68A4F1',
+      yologgerBlue200: '#2B6AD0',
+      yologgerBlue300: '#1F4591',
+      yologgerBlue400: '#061E47',
+
+      yologgerBrown100: '#E4D4C8',
+      yologgerBrown200: '#D0B49F',
+      yologgerBrown300: '#A47551',
+      yologgerBrown400: '#523A28',
+
     },
     font: {
       family: "'Noto Sans KR', sans-serif",
@@ -113,7 +123,28 @@ const theme = {
       headline: '30px',
       title: '40px',
     },
-    bodyWidth: '1024px',
+    // bodyWidth: '1024px',
+    bodyWidth: '744px',
+    padding: {
+      small: '13px',
+      xsmall: '12px',
+      xxsmall: '11px',
+      base: '14px',
+      large: '16px',
+      xlarge: '18px',
+      xxlarge: '20px',
+      xxxlarge: '22px',      
+    },
+    margin: {
+      small: '13px',
+      xsmall: '12px',
+      xxsmall: '11px',
+      base: '14px',
+      large: '16px',
+      xlarge: '18px',
+      xxlarge: '20px',
+      xxxlarge: '22px',      
+    }
   } as const;
   
   export default theme;  

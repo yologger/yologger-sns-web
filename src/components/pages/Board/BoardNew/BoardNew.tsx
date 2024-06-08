@@ -1,6 +1,5 @@
 import styled, { theme } from '~/styledComponents';
 
-
 const BoardNew = () => {
     return <Wrapper>
         <Page>
@@ -11,13 +10,18 @@ const BoardNew = () => {
                 <Group>
                     <BoardBody />
                 </Group>
-                <Group>
-                    <BoardSaveButton
+                <ButtonGroup>
+                    <CancelButton
+                        type="button"
+                    >
+                        취소
+                    </CancelButton>
+                    <SaveButton
                         type="button"
                     >
                         등록하기
-                    </BoardSaveButton>
-                </Group>
+                    </SaveButton>
+                </ButtonGroup>
             </Groups>
         </Page>
     </Wrapper>
@@ -67,7 +71,7 @@ const BoardBody = () => {
     </>
 }
 
-export const BoardSaveButton = styled.button`
+export const CancelButton = styled.button`
     height: 3.5rem;
     width: 10rem;  
     font-size: 20px;
@@ -76,6 +80,20 @@ export const BoardSaveButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;      
+    background: ${theme.color.lightGrey};
+`
+
+export const SaveButton = styled.button`
+    height: 3.5rem;
+    width: 10rem;  
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 2px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+    color: ${theme.color.basic0};
+    background: ${theme.color.yologgerBlue200};
 `
 
 export const Groups = styled.ul`
@@ -86,7 +104,19 @@ export const Group = styled.li`
   width: 100%;
   display: flex;
   padding: 2rem 0;
-  border-bottom: 1px solid ${theme.color.bgztGrey50};
+  border-bottom: 1px solid ${theme.color.yologgerGrey50};
+
+  &:last-child {
+    border-bottom: 0;
+  }
+`;
+
+export const ButtonGroup = styled.li`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid ${theme.color.yologgerGrey50};
 
   &:last-child {
     border-bottom: 0;
@@ -97,14 +127,14 @@ export const Label = styled.div<{ center?: boolean; pad?: number }>`
   width: 10.5rem;
   font-size: 18px;
   font-weight: 400;
-  color: ${theme.color.bgztGrey900};
+  color: ${theme.color.yologgerGrey900};
 
   & > span {
-    color: ${theme.color.bgztRed500};
+    color: ${theme.color.yologgerRed500};
   }
 
   & > small {
-    color: ${theme.color.bgztGrey300};
+    color: ${theme.color.yologgerGrey300};
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
