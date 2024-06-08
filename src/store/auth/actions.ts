@@ -6,6 +6,12 @@ export const login = (email: String, password: String) => {
     }
 }
 
+export const validateAccessToken = () => {
+    return {
+        type: ActionTypes.VALIDATE_ACCESS_TOKEN
+    }
+}
+
 export const logout = () => {
     return {
         type: ActionTypes.LOGOUT

@@ -15,6 +15,8 @@ export default (state: IAuthState = initialState, action: RootAction): IAuthStat
     switch (action.type) {
         case ActionTypes.LOGIN:
             return state;
+        case ActionTypes.VALIDATE_ACCESS_TOKEN:
+            return state;    
         case ActionTypes.LOGOUT:
             return state;
         case ActionTypes.GET_USER_INFO:
