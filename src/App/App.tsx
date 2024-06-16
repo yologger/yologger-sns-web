@@ -10,6 +10,8 @@ import Join from '~/components/pages/Join';
 import BoardNew from '~/components/pages/Board/BoardNew';
 import BoardEdit from '~/components/pages/Board/BoardEdit';
 import BoardDetail from '~/components/pages/Board/BoardDetail';
+import Test from '~/components/pages/Test';
+import Toast from '~/components/templates/Toast';
 
 const App = () => {
   return <>
@@ -22,9 +24,11 @@ const App = () => {
         <Route exact path="/board/new" component={BoardNew} />
         <Route exact path="/board/edit/:bid(\d+)" component={BoardEdit} />
         <Route exact path="/board/:bid(\d+)" component={BoardDetail} />
+        <Route exact path="/test" component={Test} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
+    <Toast />
   </>
 }
 

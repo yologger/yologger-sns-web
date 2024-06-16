@@ -1,4 +1,4 @@
-import { RootAction } from "~/store";
+import { RootActions } from "~/store";
 import ActionTypes, { IAuthState } from "./types";
 
 export const initialState: IAuthState = {
@@ -11,7 +11,7 @@ export const initialState: IAuthState = {
     }
 }
 
-export default (state: IAuthState = initialState, action: RootAction): IAuthState => {
+export default (state: IAuthState = initialState, action: RootActions): IAuthState => {
     switch (action.type) {
         case ActionTypes.LOGIN:
             return state;

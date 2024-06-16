@@ -46,6 +46,10 @@ module.exports = {
                 resolve: {
                     fullySpecified: false
                 }
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
             }
         ],
     },
